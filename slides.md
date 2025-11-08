@@ -51,13 +51,13 @@ mdc: true
 
 - **fujitani sora** / @_fs0414
 - <EmojiText emoji="🏢">株式会社トリドリ・software engineer</EmojiText>
-- <EmojiText emoji="🎤">TSKaigiの運営</EmojiText>
-- <EmojiText emoji="💻">技育CAMPの公式メンター</EmojiText>
-- <EmojiText emoji="🌆">shibuyatsの運営</EmojiText>
+- <EmojiText emoji="🎤">xxx</EmojiText>
+- <EmojiText emoji="💻">xxx</EmojiText>
+- <EmojiText emoji="🌆">xxx</EmojiText>
 
 <br>
 
-👋 はじめまして！
+👋 
 
   </template>
   <template #right>

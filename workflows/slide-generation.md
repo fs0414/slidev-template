@@ -13,6 +13,7 @@
 2. **1スライド = 1メッセージ**: 情報を適切に分割
 3. **視覚的な確認**: 生成後は`chrome-devtools-mcp`で確認
 4. **一貫性**: 同じタイプの内容には同じレイアウト
+5. **入力情報のみ使用**: コンテンツMDに書かれた情報のみを使用し、抽象的表現・誇張表現・推測情報を追加しない
 
 ---
 
@@ -221,11 +222,11 @@ class: slide-gradient-bg
 
 **入力**:
 ```md
-## 主な特徴
+## 導入した技術
 
-- シンプルで直感的
-- 高速なビルド
-- 拡張性が高い
+- TypeScript 5.0による型チェック
+- Vite 4.0によるビルド
+- プラグインシステムによる機能拡張
 ```
 
 **出力** (絵文字を自動追加):
@@ -233,18 +234,18 @@ class: slide-gradient-bg
 ---
 ---
 
-# 主な特徴
+# 導入した技術
 
-- <EmojiText emoji="✨">シンプルで直感的</EmojiText>
-- <EmojiText emoji="🚀">高速なビルド</EmojiText>
-- <EmojiText emoji="🔧">拡張性が高い</EmojiText>
+- <EmojiText emoji="✨">TypeScript 5.0による型チェック</EmojiText>
+- <EmojiText emoji="🚀">Vite 4.0によるビルド</EmojiText>
+- <EmojiText emoji="🔧">プラグインシステムによる機能拡張</EmojiText>
 ```
 
 **または** (シンプルに):
 ```md
-- ✨ シンプルで直感的
-- 🚀 高速なビルド
-- 🔧 拡張性が高い
+- ✨ TypeScript 5.0による型チェック
+- 🚀 Vite 4.0によるビルド
+- 🔧 プラグインシステムによる機能拡張
 ```
 
 ### 5. コードブロックの変換
@@ -320,6 +321,8 @@ const age: number = 30
 - [ ] コードブロックは2カラムレイアウトになっているか？
 - [ ] 既存のコンポーネント（`CoverSlide`, `TwoColumnLayout`, `CenteredImage`など）を使用しているか？
 - [ ] デフォルト設定（`transition`など）を重複して書いていないか？
+- [ ] コンテンツMDの情報を正確に転記しているか？
+- [ ] 抽象的表現・誇張表現・推測情報を追加していないか？
 
 ### 推奨チェック
 
@@ -358,6 +361,12 @@ const age: number = 30
 2. **情報の詰め込み**: 1スライドに多くの情報を入れない
 3. **デフォルト設定の重複記述**: `transition`などは書かない
 4. **コンポーネントの未使用**: 表紙を手動で書くなど
+5. **情報の捏造・追加**:
+   - ❌ 抽象的な表現を追加（モダンな、革新的な、美しい）
+   - ❌ 誇張表現を追加（簡単に、劇的な、圧倒的な）
+   - ❌ 存在しない数値や実測値を追加
+   - ❌ コンテンツMDに書かれていない情報を推測して追加
+   - ❌ ユーザーの表現を勝手に言い換える
 
 ### 必ずやること
 
@@ -365,6 +374,10 @@ const age: number = 30
 2. **情報の適切な分割**: 7±2の法則を守る
 3. **一貫性の維持**: 同じタイプには同じレイアウト
 4. **視覚的確認**: 生成後は`chrome-devtools-mcp`で確認
+5. **入力情報の忠実な使用**:
+   - ✅ コンテンツMDのテキストをそのまま使用
+   - ✅ 提供された情報を正確に転記
+   - ✅ ユーザーが書いた表現を尊重
 
 ---
 
@@ -373,6 +386,13 @@ const age: number = 30
 ### 入力: content/example.md（一部）
 
 ```md
+---
+title: TypeScript開発のベストプラクティス
+subtitle: 型安全性を活かした開発手法
+author: 開発太郎
+event: Web技術勉強会 2025
+---
+
 # Introduction
 
 ## Background
@@ -392,9 +412,9 @@ const age: number = 30
 
 ```vue
 <CoverSlide
-  title="Modern Web Development with TypeScript"
-  subtitle="Exploring type-safe development practices"
-  event="Tech Conference 2025"
+  title="TypeScript開発のベストプラクティス"
+  subtitle="型安全性を活かした開発手法"
+  event="Web技術勉強会 2025"
   author="開発太郎"
 />
 
@@ -433,4 +453,4 @@ class: slide-gradient-bg
 
 ---
 
-このワークフローに従うことで、一貫性があり、視覚的に優れたスライドを自動生成できます。
+このワークフローに従うことで、一貫性のあるスライドを自動生成できます。

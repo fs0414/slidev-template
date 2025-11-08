@@ -1,12 +1,63 @@
 # Slidev Common Template
 
+> デザインシステムを備えた、再利用可能なSlidevプレゼンテーションテンプレート
+
+## 📖 概要
+
+このプロジェクトは、[Slidev](https://sli.dev/)をベースとした共通テンプレートです。コンポーネントシステムとワークフローを提供し、技術プレゼンテーションの作成を効率化します。
+
+### 主な特徴
+
+- **統一されたデザインシステム**: `design_system/`に完全ドキュメント化された再利用可能なコンポーネント
+- **カラースキーム**: oklch color spaceを使用したグラデーション
+- **型安全性**: TypeScriptによる型定義とPropsバリデーション
+- **パッケージ管理**: Bunによる依存関係管理とビルド
+- **MCP連携**: Claude Code (serena, chrome-devtools) との統合開発環境
+- **自動化ワークフロー**: Markdownからスライドを生成するワークフローを提供
+
+## 🛠️ 技術スタック
+
+| カテゴリ | 技術 | 用途 |
+|---------|------|------|
+| **プレゼンテーション** | [Slidev](https://sli.dev/) | Markdown駆動のスライド生成 |
+| **フレームワーク** | [Vue.js 3](https://vuejs.org/) | コンポーネントベースのUI構築 |
+| **言語** | [TypeScript](https://www.typescriptlang.org/) | 型安全な開発 |
+| **パッケージ管理** | [Bun](https://bun.sh/) | 高速な依存関係管理・ランタイム |
+| **スタイリング** | CSS (oklch color space) | カラーシステム |
+| **シンタックスハイライト** | [Shiki](https://shiki.style/) | コードのシンタックスハイライト |
+| **開発ツール (MCP)** | serena, chrome-devtools | Claude Codeとの統合 |
+| **絵文字** | [Twemoji](https://twemoji.twitter.com/) | 統一された絵文字表示 |
+
+## 📁 プロジェクト構造
+
+```
+slidev-template/
+├── design_system/          # デザインシステムドキュメント
+│   ├── ai-guide.md        # AI向けクイックガイド
+│   ├── components.md      # コンポーネントカタログ
+│   ├── layouts.md         # レイアウトパターン
+│   ├── tokens.md          # デザイントークン定義
+│   ├── utility-classes.md # ユーティリティクラス
+│   └── examples.md        # 使用例
+├── components/            # Vueコンポーネント
+├── content/              # スライドコンテンツ（Markdown）
+├── docs_priv/            # プライベートドキュメント・研究ノート
+├── pages/                # カスタムページ
+├── slidev_context/       # Slidev設定・コンテキスト
+├── workflows/            # 自動化ワークフロー
+├── note.md               # スライド生成元ノート（デフォルト）
+├── slides.md             # メインスライドファイル
+├── style.css             # グローバルスタイル
+└── package.json          # 依存関係定義
+```
+
 ## 🎨 デザインの特徴
 
-- **oklch color space**: モダンなカラーパレット（Purple to Blue gradient）
+- **oklch color space**: Purple to Blue gradientのカラーパレット
 - **レスポンシブタイポグラフィ**: clamp()を使用した自動調整
 - **グラデーション見出し**: アニメーション付き
-- **曲線アンダーライン**: 視覚的なアクセント
-- **View Transition対応**: モダンブラウザの新機能サポート
+- **曲線アンダーライン**: SVGベースのアンダーライン装飾
+- **View Transition対応**: ブラウザのView Transition API対応
 - **Emoji統合**: Twemoji対応
 - **ダークモード**: 自動切り替え対応
 
@@ -26,7 +77,20 @@ bun run dev
 
 ブラウザで http://localhost:3030 が自動的に開きます。
 
-### 3. ビルド
+### 3. スライド自動生成（ワークフロー）
+
+`note.md`にスライド内容を執筆し、自動変換します。
+
+```bash
+# 1. note.md に内容を執筆（Markdown形式）
+# 2. Claude Code で /gen-slide コマンドを実行
+```
+
+デフォルトで`note.md`をソースとして使用します。他のファイルを指定する場合は `/gen-slide content/example.md` のように指定できます。
+
+詳細は `workflows/slide-generation.md` と `content/README.md` を参照してください。
+
+### 4. ビルド
 
 ```bash
 bun run build
@@ -34,7 +98,7 @@ bun run build
 
 静的ファイルが `dist/` ディレクトリに生成されます。
 
-### 4. PDF/PPTX/PNG エクスポート
+### 5. PDF/PPTX/PNG エクスポート
 
 ```bash
 bun run export
