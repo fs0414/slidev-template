@@ -50,12 +50,12 @@ mdc: true
   <template #left>
 
 - **fujitani sora** / @_fs0414
-- <EmojiText emoji="🏢">株式会社トリドリ・software engineer</EmojiText>
+- <EmojiText emoji="🏢">株式会社xxx・software engineer</EmojiText>
 - <EmojiText emoji="🎤">xxx</EmojiText>
 - <EmojiText emoji="💻">xxx</EmojiText>
 - <EmojiText emoji="🌆">xxx</EmojiText>
 
-<br>
+<br> 
 
 👋 
 
