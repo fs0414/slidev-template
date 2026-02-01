@@ -22,7 +22,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 <template>
   <div class="cover-slide">
-    <div class="cover-content mt-20">
+    <div class="cover-content">
       <h1 v-if="!gradient" class="cover-title">
         {{ title }}
       </h1>
@@ -55,30 +55,25 @@ const props = withDefaults(defineProps<Props>(), {
 <style>
 /* グローバルスタイル：CoverSlideを含むスライドのレイアウトをリセット */
 .slidev-layout:has(.cover-slide) {
-  display: block !important;
-  justify-content: initial !important;
   padding: 0 !important;
 }
 </style>
 
 <style scoped>
 .cover-slide {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  padding: 7% 3%;
-  display: flex;
-  flex-direction: column;
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
 }
 
 .cover-content {
-  max-width: 100%;
-  flex: 1;
+  text-align: center;
 }
 
 .cover-title {
   margin-bottom: 0;
-  font-size: clamp(2rem, 5vw, 3.5rem) !important;
+  font-size: clamp(1.8rem, 4vw, 3rem) !important;
   line-height: 1.1;
 }
 
@@ -89,14 +84,11 @@ const props = withDefaults(defineProps<Props>(), {
 
 .cover-meta {
   font-size: 0.875rem;
-  text-align: right;
-  color: oklch(0.5 0.05 270);
+  text-align: center;
+  color: oklch(0.85 0.02 270);
 }
 
 .cover-social {
-  margin-top: auto;
-  align-self: flex-end;
-  padding-top: 2rem;
-  padding-bottom: 0.5rem;
+  margin-top: 2rem;
 }
 </style>

@@ -32,10 +32,8 @@ mdc: true
 
 <CoverSlide
   title="プレゼンテーションタイトル"
-  subtitle="サブタイトルや簡単な説明"
   event="イベント名"
   author="fujitani sora"
-  :social="{ github: 'fs0414', twitter: '_fs0414' }"
 />
 
 <!--
