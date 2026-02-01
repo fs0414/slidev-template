@@ -1,33 +1,20 @@
 ---
-# テーマ設定
-theme: apple-basic
-
-# プレゼンテーションのタイトル
-title: プレゼンテーションタイトル
-
-# プレゼンテーション情報（メタデータ）
-info: |
-  ## プレゼンテーション概要
-  ここにプレゼンテーションの概要を記載します。
-
-# スライドトランジション
-transition: slide-left
-
-# シンタックスハイライター
+theme: default
+background: false
+class: text-center
 highlighter: shiki
-
-# 行番号表示
-lineNumbers: false
-
-# 描画機能
+lineNumbers: true
+shikiConfig:
+  theme: 'nord'
 drawings:
   persist: false
-
-# ダウンロード機能を有効化
-download: true
-
-# MDC構文を有効化
+transition: slide-left
+title: プレゼンテーションタイトル
 mdc: true
+fonts:
+  sans: 'Roboto'
+  serif: 'Roboto Slab'
+  mono: 'Fira Code'
 ---
 
 <CoverSlide

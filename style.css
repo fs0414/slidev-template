@@ -20,10 +20,10 @@
 
 .dark {
   /* Dark mode colors */
-  --color-text: oklch(0.9 0.02 250);
-  --color-text-muted: oklch(0.6 0.05 250);
-  --color-bg: oklch(0.18 0.01 255);
-  --color-bg-soft: oklch(0.22 0.015 255);
+  --color-text: oklch(0.9 0.02 270);
+  --color-text-muted: oklch(0.6 0.05 270);
+  --color-bg: oklch(0.15 0.02 270);
+  --color-bg-soft: oklch(0.2 0.03 270);
 }
 
 /* フォント設定 */
@@ -157,12 +157,117 @@ code {
   font-size: 0.9em;
   padding: 0.2em 0.4em;
   border-radius: 4px;
-  background: color-mix(in oklch, var(--color-primary) 10%, transparent);
+  background: oklch(0.9 0.03 200 / 0.15);
+  color: oklch(0.45 0.15 195);
 }
 
 pre code {
   padding: 0;
   background: transparent;
+  color: inherit;
+}
+
+/* Shiki コードブロックの背景調整 */
+.shiki {
+  background: oklch(0.08 0.015 200) !important;
+  padding: 1.5rem !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 6px -1px oklch(0 0 0 / 0.2);
+}
+
+.dark .shiki {
+  background: oklch(0.06 0.015 200) !important;
+}
+
+/* Diff ブロックのカラーリング */
+.diff-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.diff-block pre:first-of-type .shiki {
+  background: linear-gradient(
+    to right,
+    rgba(255, 50, 50, 0.15),
+    rgba(255, 50, 50, 0.05)
+  ) !important;
+  border-left: 3px solid #ff5050 !important;
+}
+
+.diff-block pre:last-of-type .shiki {
+  background: linear-gradient(
+    to right,
+    rgba(50, 255, 50, 0.15),
+    rgba(50, 255, 50, 0.05)
+  ) !important;
+  border-left: 3px solid #50ff50 !important;
+}
+
+/* シンタックスハイライトのカスタマイズ - 水色系 */
+.shiki,
+.shiki span {
+  color: #ffffff !important;
+}
+
+.shiki span[style*="color:#A3BE8C"],
+.shiki span[style*="color:#8FBCBB"],
+.shiki span[style*="color:#88C0D0"],
+.shiki span[style*="color:#EBCB8B"],
+.shiki span[style*="color:#A3BE8C"] {
+  color: #5fd7ff !important;
+}
+
+.shiki span[style*="color:#81A1C1"] {
+  color: #00bfff !important;
+}
+
+.shiki span[style*="color:#8FBCBB"] {
+  color: #0087af !important;
+}
+
+.shiki span[style*="color:#616E88"],
+.shiki span[style*="color:#4C566A"] {
+  color: #5f8787 !important;
+  font-style: italic;
+}
+
+.shiki span[style*="color:#D8DEE9"],
+.shiki span[style*="color:#E5E9F0"],
+.shiki span[style*="color:#ECEFF4"] {
+  color: #87ffff !important;
+}
+
+.shiki span[style*="color:#88C0D0"],
+.shiki span[style*="color:#5E81AC"],
+.shiki span[style*="color:#BF616A"],
+.shiki span[style*="color:#D08770"],
+.shiki span[style*="color:#EBCB8B"] {
+  color: #00ffff !important;
+  font-weight: 600;
+  text-shadow: 0 0 3px rgba(0, 255, 255, 0.5);
+}
+
+.shiki span[style*="color:#B48EAD"] {
+  color: #00d7d7 !important;
+}
+
+.shiki span[style*="color:#D8DEE9E5"],
+.shiki span[style*="color:#81A1C1"] {
+  color: #ffffff !important;
+}
+
+[data-theme="nord"] .shiki {
+  background: #0d1117 !important;
+}
+
+[data-theme="nord"] .shiki code {
+  color: #ffffff !important;
+}
+
+.shiki .line-number {
+  color: #5f8787 !important;
+  opacity: 0.7;
 }
 
 /* v-click要素 */
