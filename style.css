@@ -54,7 +54,7 @@
 
 /* 見出しスタイル */
 h1 {
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-size: clamp(1.3rem, 3.2vw, 2rem);
   font-weight: 800;
   line-height: 1.2;
   letter-spacing: -0.02em;
@@ -63,7 +63,7 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(1.25rem, 3.5vw, 2rem);
+  font-size: clamp(1.1rem, 2.8vw, 1.6rem);
   font-weight: 700;
   line-height: 1.3;
   letter-spacing: -0.01em;
@@ -73,7 +73,7 @@ h2 {
 }
 
 h3 {
-  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-size: clamp(1rem, 2.2vw, 1.3rem);
   font-weight: 600;
   line-height: 1.4;
   margin-top: 1.5rem;
@@ -84,9 +84,9 @@ h3 {
 /* グラデーション見出し */
 .gradient-heading {
   background: linear-gradient(135deg,
-    oklch(0.65 0.25 270) 0%,
-    oklch(0.7 0.22 240) 50%,
-    oklch(0.75 0.2 210) 100%
+    oklch(0.58 0.2 250) 0%,
+    oklch(0.63 0.18 230) 50%,
+    oklch(0.68 0.16 215) 100%
   );
   -webkit-background-clip: text;
   background-clip: text;
@@ -123,7 +123,7 @@ p {
   color: var(--color-text);
   line-height: 1.8;
   margin-bottom: 1rem;
-  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  font-size: clamp(0.8rem, 1.6vw, 0.95rem);
 }
 
 /* リストスタイル */
@@ -131,7 +131,7 @@ li {
   color: var(--color-text);
   line-height: 1.8;
   margin-bottom: 0.5rem;
-  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  font-size: clamp(0.8rem, 1.6vw, 0.95rem);
 }
 
 ul, ol {

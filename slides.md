@@ -29,32 +29,46 @@ fonts:
 
 ---
 
-# 自己紹介
+<div style="padding: 0 8%">
 
-<TwoColumnLayout :gap="8">
-  <template #left>
+## about me
 
-- **fujitani sora** / @_fs0414
-- <EmojiText emoji="🏢">株式会社xxx・software engineer</EmojiText>
-- <EmojiText emoji="🎤">xxx</EmojiText>
-- <EmojiText emoji="💻">xxx</EmojiText>
-- <EmojiText emoji="🌆">xxx</EmojiText>
+<div class="grid grid-cols-[1fr_1fr] items-start gap-8">
+  <div>
+    <p class="text-2xl font-bold mb-4" style="color: oklch(0.7 0.15 215)">fujitani sora</p>
+    <div class="flex flex-col gap-3 text-lg font-semibold">
+      <div class="flex items-center gap-2">
+        <carbon-building class="text-lg" />
+        <span>toridori inc engineer</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <carbon-logo-x class="text-lg" />
+        <a href="https://x.com/_fs0414">@_fs0414</a>
+      </div>
+      <div class="flex items-center gap-2">
+        <carbon-logo-github class="text-lg" />
+        <a href="https://github.com/fs0414">github.com/fs0414</a>
+      </div>
+      <div class="flex items-center gap-2">
+        <carbon-globe class="text-lg" />
+        <a href="https://sorafujitani.me/">sorafujitani.me</a>
+      </div>
+    </div>
+  </div>
+  <div class="flex justify-center" style="margin-top: -1.5rem">
+    <CenteredImage
+      src="https://raw.githubusercontent.com/fs0414/imgs/main/fs0414_dot_image.png"
+      alt="プロフィール画像"
+      width="280px"
+    />
+  </div>
+</div>
 
-<br> 
+<div class="mt-6 text-sm text-gray-400">
+  ここに最近のTipsを記載
+</div>
 
-👋 
-
-  </template>
-  <template #right>
-
-<CenteredImage
-  src="https://raw.githubusercontent.com/fs0414/imgs/main/fs0414_dot_image.png"
-  alt="プロフィール画像"
-  width="320px"
-/>
-
-  </template>
-</TwoColumnLayout>
+</div>
 
 ---
 class: slide-gradient-bg
@@ -165,7 +179,7 @@ console.log(hello)
 # 画像表示
 
 <CenteredImage
-  src="https://via.placeholder.com/800x400"
+  src="https://placehold.co/800x400"
   alt="サンプル画像"
   width="800px"
   caption="画像のキャプション"
@@ -196,13 +210,4 @@ layout: center
 class: text-center
 ---
 
-<GradientHeading>
-  ご清聴ありがとうございました
-</GradientHeading>
-
-<div class="mt-8">
-  <SocialLinks
-    github="fs0414"
-    twitter="_fs0414"
-  />
-</div>
+<h1 class="text-white text-4xl font-bold">see you later 👋</h1>
