@@ -20,10 +20,10 @@
 
 .dark {
   /* Dark mode colors */
-  --color-text: oklch(0.9 0.02 270);
-  --color-text-muted: oklch(0.6 0.05 270);
-  --color-bg: oklch(0.15 0.02 270);
-  --color-bg-soft: oklch(0.2 0.03 270);
+  --color-text: oklch(0.9 0.02 250);
+  --color-text-muted: oklch(0.6 0.05 250);
+  --color-bg: oklch(0.18 0.01 255);
+  --color-bg-soft: oklch(0.22 0.015 255);
 }
 
 /* フォント設定 */
@@ -39,10 +39,9 @@
 /* 全スライド共通の背景 */
 #slideshow,
 .slidev-page {
-  background: linear-gradient(135deg,
-    color-mix(in oklch, var(--color-primary) 5%, var(--color-bg)) 0%,
-    var(--color-bg) 100%
-  ) !important;
+  background:
+    radial-gradient(ellipse 80% 50% at 0% 0%, oklch(0.6 0.2 220 / 0.35) 0%, transparent 50%),
+    linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-soft) 100%) !important;
 }
 
 /* レイアウト設定 */
