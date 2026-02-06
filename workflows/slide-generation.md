@@ -94,13 +94,14 @@
 ```md
 ---
 layout: center
-class: slide-gradient-bg
 ---
 
 # <span class="gradient-heading">[H1の内容]</span>
 
 [H1直後のテキスト（あれば）]
 ```
+
+**背景**: 全スライドに共通の背景グラデーションが自動適用されるため、追加クラスは不要
 
 #### 通常のコンテンツスライド
 
@@ -193,7 +194,6 @@ event: イベント名
 ```md
 ---
 layout: center
-class: slide-gradient-bg
 ---
 
 # <span class="gradient-heading">Introduction</span>
@@ -420,7 +420,6 @@ event: Web技術勉強会 2025
 
 ---
 layout: center
-class: slide-gradient-bg
 ---
 
 # <span class="gradient-heading">Introduction</span>

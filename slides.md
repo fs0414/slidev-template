@@ -71,8 +71,6 @@ fonts:
 </div>
 
 ---
-class: slide-gradient-bg
----
 
 # 見出しスライド
 

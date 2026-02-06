@@ -120,18 +120,17 @@ layout: center
 
 ## レイアウトの組み合わせ
 
-### グラデーション背景を追加
+### 背景グラデーション
+
+全スライドに共通の背景グラデーション（上辺中央から横長に広がる青グラデーション）が自動適用されます。追加クラスは不要です。
 
 ```md
 ---
 layout: center
-class: slide-gradient-bg
 ---
 
 # タイトル
 ```
-
-`class: slide-gradient-bg` を追加すると、グラデーション背景が適用されます。
 
 ---
 
@@ -191,7 +190,7 @@ Slidev の標準レイアウトを使わず、Tailwind CSS で手動レイアウ
 | 通常のコンテンツ | デフォルト |
 | コードと説明 | two-cols |
 | 画像とテキスト | two-cols |
-| セクション区切り | center + gradient-bg |
+| セクション区切り | center |
 | 質疑応答 | center |
 | 表紙 | CoverSlide コンポーネント |
 | 最終ページ | center + text-center |
@@ -253,13 +252,14 @@ layout: two-cols
 ```md
 ---
 layout: center
-class: slide-gradient-bg
 ---
 
 # <span class="gradient-heading">次のセクション</span>
 
 セクションの説明
 ```
+
+**背景**: 全スライドに共通の背景グラデーションが自動適用されるため、追加クラスは不要
 
 ---
 

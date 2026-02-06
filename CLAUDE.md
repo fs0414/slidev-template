@@ -194,7 +194,7 @@ components/
 2. スライドタイプを判定
    - 表紙？ → CoverSlide コンポーネント
    - 2カラム？ → TwoColumnLayout コンポーネント
-   - セクション区切り？ → layout: center + gradient-bg
+   - セクション区切り？ → layout: center（背景グラデーションは自動適用）
    - 通常コンテンツ？ → デフォルトレイアウト
    ↓
 3. ai-guide.md のテンプレートを使用

@@ -23,7 +23,7 @@
 
 5. **コンポーネント選択と生成**
    - 表紙: `CoverSlide`
-   - セクション区切り: `layout: center` + `slide-gradient-bg`
+   - セクション区切り: `layout: center`（背景グラデーションは自動適用）
    - コード + 説明: `TwoColumnLayout`
    - 画像: `CenteredImage`
    - その他: デフォルトレイアウト

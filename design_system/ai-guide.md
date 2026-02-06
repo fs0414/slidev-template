@@ -148,7 +148,6 @@ const example = 'code'
 ```md
 ---
 layout: center
-class: slide-gradient-bg
 ---
 
 # <span class="gradient-heading">セクションタイトル</span>
@@ -157,6 +156,8 @@ class: slide-gradient-bg
 ```
 
 **使用シーン**: 大きなトピックの区切り、章の開始
+
+**背景**: 全スライドに共通の背景グラデーション（上辺中央から横長に広がる青グラデーション）が自動適用されるため、追加クラスは不要
 
 ---
 
@@ -239,7 +240,7 @@ const user: User = {
    → Yes: TwoColumnLayout
 
 3. セクション区切りか？
-   → Yes: layout: center + gradient-bg
+   → Yes: layout: center
 
 4. 画像を中央に表示？
    → Yes: CenteredImage
@@ -259,7 +260,6 @@ const user: User = {
 | グラデーション見出し | `gradient-heading` | `<span class="gradient-heading">タイトル</span>` |
 | アニメーションシャドウ | `animated-shadow` | `<span class="gradient-heading animated-shadow">タイトル</span>` |
 | テキストシャイン | `text-shine` | `<h1 class="text-shine">輝くタイトル</h1>` |
-| グラデーション背景 | `slide-gradient-bg` | `class: slide-gradient-bg` |
 | 曲線アンダーライン | `curved-underline` | `<span class="curved-underline">強調</span>` |
 | 絵文字 | `emoji` | `<span class="emoji">🎨</span>` |
 
@@ -349,7 +349,7 @@ transition: slide-left  # これは不要（デフォルトで設定済み）
    - テキスト、画像、コードなど
 
 5. **必要に応じてスタイルクラスを追加**
-   - gradient-heading、slide-gradient-bg など
+   - gradient-heading、animated-shadow など
 
 ---
 

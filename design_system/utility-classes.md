@@ -133,16 +133,6 @@
 <span class="curved-underline">強調テキスト</span>
 ```
 
-### slide-gradient-bg（スライドグラデーション背景）
-
-スライド全体にグラデーション背景を適用。
-
-```md
----
-class: slide-gradient-bg
----
-```
-
 ---
 
 ## 組み合わせ例

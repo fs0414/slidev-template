@@ -194,7 +194,6 @@ layout: two-cols
 ```md
 ---
 layout: center
-class: slide-gradient-bg
 ---
 
 # <span class="gradient-heading">次のセクション</span>
@@ -203,7 +202,6 @@ class: slide-gradient-bg
 ```
 
 **問題点**:
-- グラデーションクラスの手動適用
 - 毎回同じパターンを書く
 
 ### After（コンポーネント）
@@ -211,7 +209,6 @@ class: slide-gradient-bg
 ```md
 ---
 layout: center
-class: slide-gradient-bg
 ---
 
 <GradientHeading tag="h1">
@@ -226,13 +223,14 @@ class: slide-gradient-bg
 ```md
 ---
 layout: center
-class: slide-gradient-bg
 ---
 
 # <span class="gradient-heading">次のセクション</span>
 
 セクションの説明
 ```
+
+**背景**: 全スライドに共通の背景グラデーションが自動適用されるため、追加クラスは不要
 
 **改善点**:
 - **読みやすい**: コンポーネント名で意図が明確
